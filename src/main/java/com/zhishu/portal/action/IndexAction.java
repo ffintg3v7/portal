@@ -20,7 +20,7 @@ public class IndexAction {
 		ModelAndView mv = new ModelAndView();
 		try {
 
-			mv.setViewName("/login.html");
+			mv.setViewName("/index.html");
 
 		} catch (Exception e) {
 			logger.error(e.getMessage(), new Throwable(e));
