@@ -18,10 +18,12 @@ public class PortalAction {
 	@RequestMapping(value = "/submiturl")
 	public ModelAndView submitUrl(HttpServletRequest request, HttpServletResponse response, String website)
 			throws Exception {
+		String sid = request.getSession().getId();
+
 		ModelAndView ret = new ModelAndView();
 		try {
 			ret.setViewName("/view/process.jsp");
-			logger.info(website);
+			logger.info(sid);
 		} catch (Exception e) {
 			logger.error("", e);
 			return null;
